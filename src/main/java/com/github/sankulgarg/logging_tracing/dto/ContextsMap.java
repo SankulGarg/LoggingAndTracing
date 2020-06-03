@@ -6,8 +6,8 @@ import java.util.Map;
 /**
  * @author sankul.garg
  *
- * @param <K>
- * @param <V>
+ * @param <K> the type of keys maintained by this map
+ * @param <V> the type of mapped values
  */
 public class ContextsMap<K, V> extends HashMap<K, V> implements Map<K, V> {
 

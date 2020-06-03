@@ -16,8 +16,9 @@ import com.github.sankulgarg.logging_tracing.helper.ResponseEntityComposer;
 import com.github.sankulgarg.logging_tracing.manager.ExceptionManager;
 
 /**
- * Class enabling centralized exception handling across all @RequestMapping methods through 
- * @ExceptionHandler methods.  
+ * Class enabling centralized exception handling across all @RequestMapping methods.  
+ *
+ * @author sankul.garg
  *
  */
 @ControllerAdvice
@@ -38,9 +39,9 @@ public class ExceptionAdvice extends ResponseEntityExceptionHandler {
 
 	/**
 	 * Catching custom MultilingualBussinessException and changing the response entity message as per the locale
-	 * @param ex
-	 * @param request
-	 * @return
+	 * @param ex The custom MultilingualBussinessException 
+	 * @param request The Web Request in context
+	 * @return new Response Entity with custom language exception
 	 */
 	@ExceptionHandler({ MultilingualBussinessException.class })
 	public ResponseEntity<Object> multilingualBussinessException(MultilingualBussinessException ex, WebRequest request) {
