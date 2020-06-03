@@ -1,0 +1,46 @@
+BDD/
+**/.classpath
+**/.project
+**/.settings/
+**/target/
+**/bin/
+**/.idea/
+*.iml
+*.*~
+**/appengine-web.xml
+
+
+# Compiled source
+*.class
+*.jar
+*.war
+*.ear
+target/
+bin/
+
+# App Engine
+appengine-generated/
+
+# Eclipse
+.classpath
+.settings/
+eclipse-launch-profiles/
+appengine-generated/
+
+# Netbeans
+nbactions.xml
+LICENSE
+test/**
+*~
+*#
+
+# Intellij
+*.iml
+.idea/
+
+# Others
+*.orig
+bower_components/*
+node_modules/*
+*.DS_Store
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="ERROR">
+	<Properties>
+		<Property name="logPath">/tmp/log-framework</Property>
+		<Property name="rollingFileName">log-framework</Property>
+		<Property name="logOutput">console</Property>
+		<Property name="sockethost">0.0.0.0</Property>
+		<Property name="logLevel">ALL</Property>
+		<Property name="serviceName">default</Property>
+	</Properties>
+	<Appenders>
+		<Socket name="SysLogAppender" host="${sys:sockethost}" immediateFlush="true" port="514"
+			protocol="UDP">
+			<PatternLayout
+				pattern="[${sys:serviceName}] [%-5level] %c{1}.%M:%L %X{logInfo} - %msg%n%ex" />
+		</Socket>
+		<RollingFile name="rollingFile"
+			fileName="${sys:logPath}/${sys:rollingFileName}.log"
+			filePattern="${sys:logPath}/${sys:logPath}_%d{yyyy-MM-dd}-%i.log.gz">
+			<PatternLayout
+				pattern="[%-5level] %d{DEFAULT} %c{1}.%M:%L %X{logInfo} - %msg%n%ex" />
+			<Policies>
+				<!-- Causes a rollover if the log file is older than the current JVM's 
+					start time -->
+				<!-- <OnStartupTriggeringPolicy /> -->
+				<!-- Causes a rollover once the date/time pattern no longer applies to 
+					the active file -->
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+				<SizeBasedTriggeringPolicy size="1024 MB" />
+			</Policies>
+		</RollingFile>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="[%-5level] %d{DEFAULT} %c{1}.%M:%L %X{logInfo} - %msg%n%ex"/>
+		</Console>
+	</Appenders>
+	<Loggers>
+		<root level="${sys:logLevel}" additivity="false"
+			includeLocation="true">
+			<AppenderRef ref="${sys:logOutput}" />
+		</root>
+		 <Logger name="com.madnas.loggingframework.aop.RequestHandler" level="INFO"
+        additivity="false">
+        <Appender-ref ref="${sys:logOutput}" level="INFO" />
+    </Logger>
+	</Loggers>
+</Configuration>
