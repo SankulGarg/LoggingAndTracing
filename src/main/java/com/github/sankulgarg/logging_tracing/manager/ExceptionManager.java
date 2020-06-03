@@ -1,10 +1,10 @@
-package com.github.sankulgarg.manager;
+package com.github.sankulgarg.logging_tracing.manager;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
 
-import com.github.sankulgarg.exception.ErrorDetails;
-import com.github.sankulgarg.exception.MultilingualBussinessException;
+import com.github.sankulgarg.logging_tracing.exception.ErrorDetails;
+import com.github.sankulgarg.logging_tracing.exception.MultilingualBussinessException;
 
 /**
  * @author sankul.garg

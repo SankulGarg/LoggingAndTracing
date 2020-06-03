@@ -1,4 +1,4 @@
-package com.github.sankulgarg.constants;
+package com.github.sankulgarg.logging_tracing.constants;
 
 public class ApplicationConstants {
 

@@ -1,4 +1,4 @@
-package com.github.sankulgarg.aop;
+package com.github.sankulgarg.logging_tracing.aop;
 
 import java.io.IOException;
 
@@ -18,10 +18,10 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.GenericFilterBean;
 
-import com.github.sankulgarg.constants.ApplicationConstants;
-import com.github.sankulgarg.dto.LogInfoDTO;
-import com.github.sankulgarg.manager.ExceptionManager;
-import com.github.sankulgarg.manager.LoggersManager;
+import com.github.sankulgarg.logging_tracing.constants.ApplicationConstants;
+import com.github.sankulgarg.logging_tracing.dto.LogInfoDTO;
+import com.github.sankulgarg.logging_tracing.manager.ExceptionManager;
+import com.github.sankulgarg.logging_tracing.manager.LoggersManager;
 
 /**
  * @author sankul.garg

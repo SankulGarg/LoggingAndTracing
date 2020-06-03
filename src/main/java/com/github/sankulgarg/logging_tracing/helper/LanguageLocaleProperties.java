@@ -1,9 +1,9 @@
-package com.github.sankulgarg.helper;
+package com.github.sankulgarg.logging_tracing.helper;
 
 import java.io.InputStream;
 import java.util.Properties;
 
-import com.github.sankulgarg.manager.ExceptionManager;
+import com.github.sankulgarg.logging_tracing.manager.ExceptionManager;
 
 /**
  * fetching the property value from specific property file defined by the culture

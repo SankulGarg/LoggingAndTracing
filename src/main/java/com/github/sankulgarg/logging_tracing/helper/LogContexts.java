@@ -1,12 +1,12 @@
-package com.github.sankulgarg.helper;
+package com.github.sankulgarg.logging_tracing.helper;
 
 import org.apache.logging.log4j.CloseableThreadContext;
 import org.apache.logging.log4j.ThreadContext;
 
-import com.github.sankulgarg.constants.ApplicationConstants;
-import com.github.sankulgarg.dto.ContextsMap;
-import com.github.sankulgarg.dto.LogInfoDTO;
-import com.github.sankulgarg.manager.ExceptionManager;
+import com.github.sankulgarg.logging_tracing.constants.ApplicationConstants;
+import com.github.sankulgarg.logging_tracing.dto.ContextsMap;
+import com.github.sankulgarg.logging_tracing.dto.LogInfoDTO;
+import com.github.sankulgarg.logging_tracing.manager.ExceptionManager;
 
 public class LogContexts {
 	private LogContexts() {

@@ -1,4 +1,4 @@
-package com.github.sankulgarg.exception;
+package com.github.sankulgarg.logging_tracing.exception;
 
 import org.springframework.http.HttpStatus;
 

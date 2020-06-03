@@ -1,4 +1,4 @@
-package com.github.sankulgarg.dto;
+package com.github.sankulgarg.logging_tracing.dto;
 
 import java.util.HashMap;
 import java.util.Map;

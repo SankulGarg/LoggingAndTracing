@@ -1,4 +1,4 @@
-package com.github.sankulgarg.annotations;
+package com.github.sankulgarg.logging_tracing.annotations;
 
 import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
@@ -8,8 +8,8 @@ import java.lang.annotation.Target;
 
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 
-import com.github.sankulgarg.aop.ExceptionAdvice;
-import com.github.sankulgarg.aop.RequestHandler;
+import com.github.sankulgarg.logging_tracing.aop.ExceptionAdvice;
+import com.github.sankulgarg.logging_tracing.aop.RequestHandler;
 
 /**
  * Annotation enabling the logging framework,

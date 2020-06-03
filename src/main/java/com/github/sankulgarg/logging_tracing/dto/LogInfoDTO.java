@@ -1,8 +1,8 @@
-package com.github.sankulgarg.dto;
+package com.github.sankulgarg.logging_tracing.dto;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.sankulgarg.manager.ExceptionManager;
+import com.github.sankulgarg.logging_tracing.manager.ExceptionManager;
 
 public class LogInfoDTO {
 	private static final ObjectMapper	mapperObj	= new ObjectMapper();

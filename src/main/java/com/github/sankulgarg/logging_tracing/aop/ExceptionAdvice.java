@@ -1,4 +1,4 @@
-package com.github.sankulgarg.aop;
+package com.github.sankulgarg.logging_tracing.aop;
 
 import java.nio.file.AccessDeniedException;
 
@@ -11,9 +11,9 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.github.sankulgarg.exception.MultilingualBussinessException;
-import com.github.sankulgarg.helper.ResponseEntityComposer;
-import com.github.sankulgarg.manager.ExceptionManager;
+import com.github.sankulgarg.logging_tracing.exception.MultilingualBussinessException;
+import com.github.sankulgarg.logging_tracing.helper.ResponseEntityComposer;
+import com.github.sankulgarg.logging_tracing.manager.ExceptionManager;
 
 /**
  * Class enabling centralized exception handling across all @RequestMapping methods through 

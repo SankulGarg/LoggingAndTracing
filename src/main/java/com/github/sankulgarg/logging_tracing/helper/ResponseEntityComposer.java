@@ -1,4 +1,4 @@
-package com.github.sankulgarg.helper;
+package com.github.sankulgarg.logging_tracing.helper;
 
 import java.util.Iterator;
 
@@ -8,9 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.context.request.WebRequest;
 
-import com.github.sankulgarg.constants.ApplicationConstants;
-import com.github.sankulgarg.exception.ErrorDetails;
-import com.github.sankulgarg.exception.MultilingualBussinessException;
+import com.github.sankulgarg.logging_tracing.constants.ApplicationConstants;
+import com.github.sankulgarg.logging_tracing.exception.ErrorDetails;
+import com.github.sankulgarg.logging_tracing.exception.MultilingualBussinessException;
 
 /** Composing custom response entity as per the language defined in the culture
  * @author sankul.garg
