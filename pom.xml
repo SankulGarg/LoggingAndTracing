@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.sankulgarg</groupId>
 	<artifactId>LoggingAndTracing</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>LoggingAndTracing</name>
+	<url>https://github.com/SankulGarg/LoggingAndTracing</url>
 	<description>A Logging and tracing framework with multilinguil exceptional handling  by Sankul Garg</description>
 	<packaging>jar</packaging>
 	<properties>
@@ -80,7 +83,21 @@
 			</exclusions>
 		</dependency>
 	</dependencies>
-
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>Sankul Garg</name>
+			<email>sankulgarg93@gmail.com</email>
+			<organization>LoggingAndTracing</organization>
+			<organizationUrl>https://github.com/SankulGarg/LoggingAndTracing</organizationUrl>
+			<timezone>UTC+05:30</timezone>
+		</developer>
+	</developers>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -180,7 +197,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 	<profiles>
 		<!-- GPG Signature on release -->
 		<profile>
