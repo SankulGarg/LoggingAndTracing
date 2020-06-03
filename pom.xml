@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.sankulgarg</groupId>
 	<artifactId>LoggingAndTracing</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<name>LoggingAndTracing</name>
 	<url>https://github.com/SankulGarg/LoggingAndTracing</url>
 	<description>A Logging and tracing framework with multilinguil exceptional handling  by Sankul Garg</description>
@@ -240,6 +240,6 @@
 		<connection>scm:git:git://github.com/SankulGarg/LoggingAndTracing.git</connection>
 		<developerConnection>scm:git:git@github.com:SankulGarg/LoggingAndTracing.git</developerConnection>
 		<url>https://github.com/SankulGarg/LoggingAndTracing.git</url>
-		<tag>1.0.1</tag>
+		<tag>0.0.2</tag>
 	</scm>
 </project>
