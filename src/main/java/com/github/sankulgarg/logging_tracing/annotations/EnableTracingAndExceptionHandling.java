@@ -8,8 +8,8 @@ import java.lang.annotation.Target;
 
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 
-import com.github.sankulgarg.logging_tracing.aop.ExceptionAdvice;
-import com.github.sankulgarg.logging_tracing.aop.RequestHandler;
+import com.github.sankulgarg.logging_tracing.handlers.ExceptionAdvice;
+import com.github.sankulgarg.logging_tracing.handlers.RequestIdHandler;
 
 /**
  * Annotation enabling the logging framework,
@@ -18,7 +18,7 @@ import com.github.sankulgarg.logging_tracing.aop.RequestHandler;
  */
 @Retention(RUNTIME)
 @Target(TYPE)
-@ImportAutoConfiguration(value = { ExceptionAdvice.class, RequestHandler.class })
+@ImportAutoConfiguration(value = { ExceptionAdvice.class, RequestIdHandler.class })
 public @interface EnableTracingAndExceptionHandling {
 
 }

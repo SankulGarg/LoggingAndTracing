@@ -1,4 +1,4 @@
-package com.github.sankulgarg.logging_tracing.aop;
+package com.github.sankulgarg.logging_tracing.handlers;
 
 import java.io.IOException;
 
@@ -30,8 +30,8 @@ import com.github.sankulgarg.logging_tracing.manager.LoggersManager;
 @Component
 @Order(1)
 @Aspect
-public class RequestHandler extends GenericFilterBean {
-	private static final Logger LOG = LoggersManager.getLogger(RequestHandler.class);
+public class RequestIdHandler extends GenericFilterBean {
+	private static final Logger LOG = LoggersManager.getLogger(RequestIdHandler.class);
 
 	@Override
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain) throws IOException, ServletException {
