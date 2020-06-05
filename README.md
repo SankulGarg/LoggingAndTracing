@@ -68,6 +68,8 @@ For Language en-UK, service need to add en-UK.property file with the correspondi
 **sample response entity in case of error:**
 {"responseCode":4000,"errorCode":"4000","details":"UK_message"}
 
+* RequestId accross modules, If you are using restTemplate then automatically requestId would be sent to the other module.
+
 ## Extra Information
 * SysLogAppender would send logs to remote VM, and Its the remote VM responsibility of maintaining and creating files accordingly.
 **Rsyslog** is an open-source software utility used on UNIX and Unix-like computer systems for forwarding log messages in an IP network,
