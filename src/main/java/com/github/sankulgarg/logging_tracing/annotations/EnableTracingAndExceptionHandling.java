@@ -8,6 +8,7 @@ import java.lang.annotation.Target;
 
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 
+import com.github.sankulgarg.logging_tracing.config.RestTemplateConfigurator;
 import com.github.sankulgarg.logging_tracing.handlers.ExceptionAdvice;
 import com.github.sankulgarg.logging_tracing.handlers.RequestIdHandler;
 
@@ -18,7 +19,7 @@ import com.github.sankulgarg.logging_tracing.handlers.RequestIdHandler;
  */
 @Retention(RUNTIME)
 @Target(TYPE)
-@ImportAutoConfiguration(value = { ExceptionAdvice.class, RequestIdHandler.class })
+@ImportAutoConfiguration(value = { ExceptionAdvice.class, RequestIdHandler.class, RestTemplateConfigurator.class })
 public @interface EnableTracingAndExceptionHandling {
 
 }
