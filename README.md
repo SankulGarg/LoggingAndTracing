@@ -1,5 +1,5 @@
 # LoggingAndTracing
-an easier way to setup logging along with request tracing multilingual exception in your spring application.
+an easier way to setup logging along with request tracing multilingual exception Handling in your spring application.
 
 ## Maven Repository
 
