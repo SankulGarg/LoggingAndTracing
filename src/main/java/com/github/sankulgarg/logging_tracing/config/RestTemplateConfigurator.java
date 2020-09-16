@@ -20,12 +20,17 @@ import com.github.sankulgarg.logging_tracing.manager.LoggersManager;
 public class RestTemplateConfigurator {
 	Logger			LOGGER	= LoggersManager.getLogger(RestTemplateConfigurator.class);
 
-	@Autowired
+	@Autowired(required = false)
 	RestTemplate	restTemplate;
 
 	@PostConstruct
 	private void postConstruct() {
 		try {
+
+			if (restTemplate == null) {
+				LOGGER.debug("no RestTemplate Configured, hence not adding RestTemplate Interceptor");
+				return;
+			}
 			List<ClientHttpRequestInterceptor> list = new ArrayList<>();
 			list.add(new HeaderRequestInterceptor());
 			restTemplate.setInterceptors(list);
