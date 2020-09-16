@@ -59,7 +59,7 @@ Logger LOGGER	= LoggersManager.getLogger(YourClass.class);
 ```
 LogContexts.add("key", "value");
 ```
-* Using multilingual exception handling, The service needs to throw **MultilingualBussinessException**, and it would be catch by the Exception advice, and based on the Bussiness **Exception-Code** will translate to the corresponding language.
+* **Using multilingual exception handling**, The service needs to throw **MultilingualBussinessException**, and it would be catch by the Exception advice, and based on the Bussiness **Exception-Code** will translate to the corresponding language.
 Note, That It expects a request header with key **Accept-Language** and service would need to define property files based on the language supported.
 For Language en-UK, service need to add en-UK.property file with the corresponding bussiness error code and message to be sent as respose.
 ```
