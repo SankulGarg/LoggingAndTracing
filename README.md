@@ -1,5 +1,5 @@
 # LoggingAndTracing
-an easier way to setup logging along with request tracing multilingual exception in your spring application.
+an easier way to setup logging along with request tracing multilingual exception Handling in your spring application.
 
 ## Maven Repository
 
@@ -67,6 +67,8 @@ For Language en-UK, service need to add en-UK.property file with the correspondi
 ```
 **sample response entity in case of error:**
 {"responseCode":4000,"errorCode":"4000","details":"UK_message"}
+
+* RequestId accross modules, If you are using restTemplate then automatically requestId would be sent to the other module.
 
 ## Extra Information
 * SysLogAppender would send logs to remote VM, and Its the remote VM responsibility of maintaining and creating files accordingly.
