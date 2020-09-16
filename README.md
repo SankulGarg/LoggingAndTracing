@@ -12,10 +12,10 @@ you can pull LoggingAndTracing from the central maven repository, just add these
 <dependency>
     <groupId>com.github.sankulgarg</groupId>
     <artifactId>LoggingAndTracing</artifactId>
-    <version>1.0.2</version>
+    <version>2.0.0</version>
 </dependency>
 ```
-
+Checkout https://mvnrepository.com/artifact/com.github.sankulgarg/LoggingAndTracing for other versions.
 ## Building From The Sources
 As it is maven project, buidling is just a matter of executing the following in your console:
 
