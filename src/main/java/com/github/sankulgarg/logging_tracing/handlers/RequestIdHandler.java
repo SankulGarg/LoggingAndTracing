@@ -50,9 +50,6 @@ public class RequestIdHandler extends GenericFilterBean {
 				chain.doFilter(request, response);
 				return;
 			}
-			if (LOG.isInfoEnabled())
-				LOG.info(request.getRequestURL().toString() + " :referer: " + request.getHeader(HttpHeaders.REFERER) + " :host: "
-						+ request.getRemoteHost());
 			String requestId = request.getHeader(ApplicationConstants.REQUEST_ID);
 			if (requestId == null)
 				requestId = java.util.UUID.randomUUID().toString();
@@ -66,14 +63,14 @@ public class RequestIdHandler extends GenericFilterBean {
 			dto.setRequestId(requestId);
 			CloseableThreadContext.put(ApplicationConstants.REQUEST_ID, requestId);
 			CloseableThreadContext.put(ApplicationConstants.LOG_INFO, dto.toString());
-			chain.doFilter(request, response);
-
+			if (LOG.isInfoEnabled())
+				LOG.info(" {} :referer: {}  :host: {}" ,request.getRequestURL() ,request.getHeader(HttpHeaders.REFERER) ,
+						request.getRemoteHost());			
 		}
 		catch (Exception e) {
 			ExceptionManager.handleException(e, "error while adding requestId");
-			chain.doFilter(request, response);
-			return;
 		}
+		chain.doFilter(request, response);
 	}
 
 }
