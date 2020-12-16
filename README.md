@@ -33,15 +33,15 @@ This Framework brings lot of configuration and different set of features.
 This annotation enables ading of request Id to **MDC thread context** which in printed with every log line, and enabling Exception advice that catches multilingual exception and create the appropriate response entity.
 * Provides Three Log mechanism which are passed by System argument **logOutput** by default it prints to console
 
-> Printing to console
+## > Printing to console
 ```
 java -jar yourApp.jar -DlogOutput=console
 ```
-> Printing to file, other optional arguments supported are **rollingFileName** and **logPath**
+## > Printing to file, other optional arguments supported are **rollingFileName** and **logPath**
 ```
 mvn spring-boot:run -DlogOutput=rollingFile -DlogPath=/tmp/log -DrollingFileName=serviceA
 ```
-> Sending logs to a different remote host, other arguments supported are **serviceName** and **sockethost**
+## > Sending logs to a different remote host, other arguments supported are **serviceName** and **sockethost**
 ```
 java -jar yourApp.jar -DlogOutput=SysLogAppender -DserviceName=serviceA  -Dsockethost=127.0.0.0
 ```
